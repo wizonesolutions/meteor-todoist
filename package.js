@@ -6,13 +6,14 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('METEOR@0.9.0');
+  api.versionsFrom('METEOR@1.0.0');
 
   var where = ['server'];
 
   // Used instead of mongo since it implies mongo in later versions.
   api.use('mongo-livedata', where);
   api.use('underscore', where);
+  api.use('http', where)
 
   api.use('meteorhacks:async@1.0.0', where);
 
